@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct CurrencyModel {
+    let name: String
+    let symbol: String
+}

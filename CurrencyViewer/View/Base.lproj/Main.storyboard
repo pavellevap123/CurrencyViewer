@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Mf-EW-I2s">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -31,7 +31,7 @@
                 <navigationController id="NBL-Lk-SLQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Main" image="doc" catalog="system" selectedImage="doc" id="15G-sJ-nfF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bdo-be-V5c">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -45,20 +45,114 @@
         <!--Currency Viewer-->
         <scene sceneID="1oe-aK-1Wa">
             <objects>
-                <viewController id="bje-J9-IOr" sceneMemberID="viewController">
+                <viewController id="bje-J9-IOr" customClass="MainViewController" customModule="CurrencyViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YkJ-Ne-4QY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3XW-sE-Fof" userLabel="Main Picker View">
+                                <rect key="frame" x="20" y="303" width="280" height="216"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRX-Sg-cIX">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="216"/>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hRX-Sg-cIX" secondAttribute="trailing" id="3WD-AB-nxQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="hRX-Sg-cIX" secondAttribute="bottom" id="Ra8-Ix-IJ0"/>
+                                    <constraint firstItem="hRX-Sg-cIX" firstAttribute="leading" secondItem="3XW-sE-Fof" secondAttribute="leading" id="mNA-yt-C4k"/>
+                                    <constraint firstItem="hRX-Sg-cIX" firstAttribute="top" secondItem="3XW-sE-Fof" secondAttribute="top" id="wsT-kg-6aj"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e84-LU-ZZr">
+                                <rect key="frame" x="20" y="44" width="280" height="251"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjy-xe-Fnw">
+                                        <rect key="frame" x="89" y="200" width="102" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Show result"/>
+                                        <connections>
+                                            <action selector="showResultTapped:" destination="bje-J9-IOr" eventType="touchUpInside" id="v6i-zt-2dQ"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Vi4-pv-8zZ">
+                                        <rect key="frame" x="55.5" y="71.5" width="169.5" height="108"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="t8l-ZR-yYw">
+                                                <rect key="frame" x="0.0" y="0.0" width="169.5" height="54"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rt5-UJ-m6i">
+                                                        <rect key="frame" x="0.0" y="0.0" width="34.5" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5y-St-3be">
+                                                        <rect key="frame" x="54.5" y="10" width="115" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LLg-Hq-Jo7">
+                                                <rect key="frame" x="0.0" y="54" width="58" height="54"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaS-mO-HeV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuA-gK-wFE">
+                                                        <rect key="frame" x="48" y="0.0" width="10" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Vi4-pv-8zZ" firstAttribute="centerX" secondItem="e84-LU-ZZr" secondAttribute="centerX" id="Gxy-CW-nWV"/>
+                                    <constraint firstItem="Vi4-pv-8zZ" firstAttribute="centerY" secondItem="e84-LU-ZZr" secondAttribute="centerY" id="amy-b7-uQa"/>
+                                    <constraint firstItem="vjy-xe-Fnw" firstAttribute="centerX" secondItem="e84-LU-ZZr" secondAttribute="centerX" id="fmI-TU-wOd"/>
+                                    <constraint firstAttribute="bottom" secondItem="vjy-xe-Fnw" secondAttribute="bottom" constant="15" id="zve-p3-P1U"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="e84-LU-ZZr" firstAttribute="leading" secondItem="5bf-hl-Kcl" secondAttribute="leading" constant="20" id="7w2-5h-iP1"/>
+                            <constraint firstItem="5bf-hl-Kcl" firstAttribute="trailing" secondItem="3XW-sE-Fof" secondAttribute="trailing" constant="20" id="EIi-OO-bV3"/>
+                            <constraint firstItem="e84-LU-ZZr" firstAttribute="top" secondItem="5bf-hl-Kcl" secondAttribute="top" id="QDz-DU-kQi"/>
+                            <constraint firstItem="3XW-sE-Fof" firstAttribute="leading" secondItem="5bf-hl-Kcl" secondAttribute="leading" constant="20" id="V3V-1v-nne"/>
+                            <constraint firstItem="5bf-hl-Kcl" firstAttribute="trailing" secondItem="e84-LU-ZZr" secondAttribute="trailing" constant="20" id="Xnp-fO-c0j"/>
+                            <constraint firstItem="3XW-sE-Fof" firstAttribute="bottom" secondItem="5bf-hl-Kcl" secondAttribute="bottom" id="ZGY-pe-5RS"/>
+                            <constraint firstItem="3XW-sE-Fof" firstAttribute="top" secondItem="e84-LU-ZZr" secondAttribute="bottom" constant="8" id="mh2-4z-8aN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5bf-hl-Kcl"/>
                     </view>
                     <navigationItem key="navigationItem" title="Currency Viewer" id="Jnw-ee-eZc">
-                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="MAn-NA-QXf"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="MAn-NA-QXf">
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="bje-J9-IOr" id="8Us-k9-vn2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="currencyLabel1" destination="Rt5-UJ-m6i" id="gvS-HW-Gdq"/>
+                        <outlet property="currencyLabel2" destination="yaS-mO-HeV" id="Yvj-8c-Vb5"/>
+                        <outlet property="pickerView" destination="hRX-Sg-cIX" id="hvS-cs-Plb"/>
+                        <outlet property="summLabel" destination="QuA-gK-wFE" id="QOW-hV-mJC"/>
+                        <outlet property="textField" destination="a5y-St-3be" id="4Lh-oB-rVg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WDt-yY-ngF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-625" y="1553"/>
+            <point key="canvasLocation" x="-628.98550724637687" y="1551.5625"/>
         </scene>
         <!--Edit-->
         <scene sceneID="r8V-o6-SMK">
@@ -66,7 +160,7 @@
                 <navigationController id="qXe-U6-lAg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Edit" image="pencil" catalog="system" selectedImage="pencil" id="KiS-kM-rGu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DvY-PX-J0x">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -77,12 +171,12 @@
             </objects>
             <point key="canvasLocation" x="307" y="879"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit View Controller-->
         <scene sceneID="7qg-f1-tIa">
             <objects>
-                <viewController id="hKo-yg-JOm" sceneMemberID="viewController">
+                <viewController id="hKo-yg-JOm" customClass="EditViewController" customModule="CurrencyViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p9U-vt-gTH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="SUq-M3-vcA"/>

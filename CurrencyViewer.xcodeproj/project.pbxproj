@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E976454224B6347C00CC1856 /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976454124B6347C00CC1856 /* CurrencyManager.swift */; };
 		E9765CE524B44A9C00F76FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9765CE424B44A9C00F76FD9 /* AppDelegate.swift */; };
 		E9765CE724B44A9C00F76FD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9765CE624B44A9C00F76FD9 /* SceneDelegate.swift */; };
-		E9765CE924B44A9C00F76FD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9765CE824B44A9C00F76FD9 /* ViewController.swift */; };
+		E9765CE924B44A9C00F76FD9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9765CE824B44A9C00F76FD9 /* MainViewController.swift */; };
 		E9765CEC24B44A9C00F76FD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9765CEA24B44A9C00F76FD9 /* Main.storyboard */; };
 		E9765CEE24B44A9D00F76FD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9765CED24B44A9D00F76FD9 /* Assets.xcassets */; };
 		E9765CF124B44A9D00F76FD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9765CEF24B44A9D00F76FD9 /* LaunchScreen.storyboard */; };
+		E9765CF924B4539200F76FD9 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9765CF824B4539200F76FD9 /* EditViewController.swift */; };
+		E9765CFE24B4E9A000F76FD9 /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9765CFD24B4E9A000F76FD9 /* CurrencyModel.swift */; };
+		E9765D0024B4ED3200F76FD9 /* RatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9765CFF24B4ED3200F76FD9 /* RatesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E976454124B6347C00CC1856 /* CurrencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyManager.swift; sourceTree = "<group>"; };
 		E9765CE124B44A9C00F76FD9 /* CurrencyViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9765CE424B44A9C00F76FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9765CE624B44A9C00F76FD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E9765CE824B44A9C00F76FD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E9765CE824B44A9C00F76FD9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E9765CEB24B44A9C00F76FD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9765CED24B44A9D00F76FD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9765CF024B44A9D00F76FD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9765CF224B44A9D00F76FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9765CF824B4539200F76FD9 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		E9765CFD24B4E9A000F76FD9 /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
+		E9765CFF24B4ED3200F76FD9 /* RatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,41 @@
 			children = (
 				E9765CE424B44A9C00F76FD9 /* AppDelegate.swift */,
 				E9765CE624B44A9C00F76FD9 /* SceneDelegate.swift */,
-				E9765CE824B44A9C00F76FD9 /* ViewController.swift */,
-				E9765CEA24B44A9C00F76FD9 /* Main.storyboard */,
+				E9765CFC24B4E98300F76FD9 /* Model */,
+				E9765CFB24B453B400F76FD9 /* View */,
+				E9765CFA24B453A200F76FD9 /* Controllers */,
 				E9765CED24B44A9D00F76FD9 /* Assets.xcassets */,
 				E9765CEF24B44A9D00F76FD9 /* LaunchScreen.storyboard */,
 				E9765CF224B44A9D00F76FD9 /* Info.plist */,
 			);
 			path = CurrencyViewer;
+			sourceTree = "<group>";
+		};
+		E9765CFA24B453A200F76FD9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E9765CE824B44A9C00F76FD9 /* MainViewController.swift */,
+				E9765CF824B4539200F76FD9 /* EditViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E9765CFB24B453B400F76FD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9765CEA24B44A9C00F76FD9 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E9765CFC24B4E98300F76FD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E9765CFD24B4E9A000F76FD9 /* CurrencyModel.swift */,
+				E9765CFF24B4ED3200F76FD9 /* RatesModel.swift */,
+				E976454124B6347C00CC1856 /* CurrencyManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9765CE924B44A9C00F76FD9 /* ViewController.swift in Sources */,
+				E9765CFE24B4E9A000F76FD9 /* CurrencyModel.swift in Sources */,
+				E9765CF924B4539200F76FD9 /* EditViewController.swift in Sources */,
+				E976454224B6347C00CC1856 /* CurrencyManager.swift in Sources */,
+				E9765CE924B44A9C00F76FD9 /* MainViewController.swift in Sources */,
 				E9765CE524B44A9C00F76FD9 /* AppDelegate.swift in Sources */,
+				E9765D0024B4ED3200F76FD9 /* RatesModel.swift in Sources */,
 				E9765CE724B44A9C00F76FD9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +327,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PG3SA42QKT;
 				INFOPLIST_FILE = CurrencyViewer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +346,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PG3SA42QKT;
 				INFOPLIST_FILE = CurrencyViewer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

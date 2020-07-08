@@ -8,11 +8,13 @@
 
 import Foundation
 
-struct ResponseModel: Codable {
+struct RatesModel: Codable {
     let rates: Rates
 }
 
 struct Rates: Codable {
     let GBP: Double
     let RUB: Double
+    let USD: Double
+    let EUR: Double?
 }
